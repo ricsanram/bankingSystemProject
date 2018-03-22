@@ -29,6 +29,7 @@ int main(int argc, char** argv)
     savingsAccount->setText("Savings\nTotal $1000.00");
     savingsAccount->move(100, 100);
 
+
     QPushButton *checkingAccount = new QPushButton(&window);
     checkingAccount->setText("Checking\nTotal $1000.00");
     checkingAccount->move(400, 100);
@@ -48,6 +49,30 @@ int main(int argc, char** argv)
     QPushButton *checkTransactionHistory = new QPushButton(&window);
     checkTransactionHistory->setText("Transaction History");
     checkTransactionHistory->move(400, 300);
+
+    //-------------------------------------------------------------------
+    //SAVINGS WINDOW
+    //-------------------------------------------------------------------
+
+    QMainWindow windowSavings;
+    windowSavings.setWindowTitle("Savings");
+    windowSavings.setFixedSize(600, 400);
+
+    QMainWindow windowChecking;
+    windowChecking.setWindowTitle("Checking");
+    windowChecking.setFixedSize(600, 400);
+
+    QMainWindow windowDeposit;
+    windowDeposit.setWindowTitle("Deposit");
+    windowDeposit.setFixedSize(600, 400);
+
+    //---------------------------------------------
+    //SIGNALS & SLOTS
+    //---------------------------------------------
+
+    savingsAccount->connect(savingsAccount, SIGNAL(clicked()), &windowSavings, SLOT (show()));
+    checkingAccount->connect(checkingAccount, SIGNAL(clicked()), &windowChecking, SLOT(show()));
+    depositFunds->connect(depositFunds, SIGNAL(clicked(bool)), &windowDeposit, SLOT(show()));
 
     window.show();
 
