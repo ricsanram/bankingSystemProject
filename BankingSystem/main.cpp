@@ -1,5 +1,5 @@
 /*==================================================================
-    main.cpp - Assigment 4
+    Banking System
 
     BY OMAR MACIAS & RICARDO SANTIAGO
 ==================================================================*/
@@ -281,15 +281,3 @@ int main(int argc, char** argv)
 
     return app.exec();
 }
-
-/*
-Display the user's name
-Display the current account's account number
-Show a total for the currently selected account
-Button to choose a savings account
-Button to choose a checking account
-Button to deposit funds into the selected account
-Button to withdraw funds from the selected account
-Button to transfer funds between accounts
-Button to check transaction history
-*/

@@ -10,4 +10,14 @@ QT = core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 SOURCES += \
-    main.cpp
+    main.cpp \
+    user.cpp \
+    savings.cpp \
+    checking.cpp \
+    mainwindow.cpp
+
+HEADERS += \
+    user.h \
+    savings.h \
+    checking.h \
+    mainwindow.h
