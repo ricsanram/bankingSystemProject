@@ -1,14 +1,23 @@
 #ifndef USER_H
 #define USER_H
 
-#include <string>
+#include <QWidget>
 
-class User
+class User : public QWidget
 {
+    Q_OBJECT
 private:
-    std::string name;
+    QString name;
+    QString userName;
+    QString passWord;
 public:
-    User();
+    explicit User(QWidget *parent = nullptr);
+    QString getName() const;
+    QString getUserName() const;
+    QString getPassWord() const;
+signals:
+
+public slots:
 };
 
 #endif // USER_H

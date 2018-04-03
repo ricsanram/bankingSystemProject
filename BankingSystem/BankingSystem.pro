@@ -11,13 +11,17 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 SOURCES += \
     main.cpp \
+    mainwindow.cpp \
     user.cpp \
     savings.cpp \
     checking.cpp \
-    mainwindow.cpp
+    savingscheckingwindow.cpp \
+    bankingsystem.cpp
 
 HEADERS += \
+    mainwindow.h \
     user.h \
     savings.h \
     checking.h \
-    mainwindow.h
+    savingscheckingwindow.h \
+    bankingsystem.h

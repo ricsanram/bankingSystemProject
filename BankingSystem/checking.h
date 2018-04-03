@@ -1,21 +1,27 @@
 #ifndef CHECKING_H
 #define CHECKING_H
 
-#include <string>
+#include <QWidget>
 
-class Checking
+class Checking : public QWidget
 {
+    Q_OBJECT
 private:
     float balance;
-    std::string name;
-    int accountNumber;
-    const float overdraftFee = 30.00;
+    QString accountNumber;
+    const float overdraftFee = 32.00;
 public:
-    Checking();
+    explicit Checking(QWidget *parent = nullptr);
     void deposit(float);
     void withdraw(float);
-    void transfer(float);
-    float getBalance();
+    void sentTransfer(float);
+    void receivedTransfer(float);
+    float getBalance() const;
+    QString getAccountNumber() const;
+    float getOverdraftFee() const;
+signals:
+
+public slots:
 };
 
 #endif // CHECKING_H

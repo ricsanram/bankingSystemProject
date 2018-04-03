@@ -4,12 +4,13 @@
     BY OMAR MACIAS & RICARDO SANTIAGO
 ==================================================================*/
 
+#include "bankingsystem.h"
 #include <QApplication>
-#include <QPushButton>
-#include <QLabel>
-#include <QMainWindow>
-#include <QLineEdit>
-#include <QTextEdit>
+//#include <QPushButton>
+//#include <QLabel>
+//#include <QMainWindow>
+//#include <QLineEdit>
+//#include <QTextEdit>
 
 int main(int argc, char** argv)
 {
@@ -17,6 +18,8 @@ int main(int argc, char** argv)
     //------------------------------------
     //WINDOW
     //------------------------------------
+
+    /*
     QMainWindow window;
     window.setWindowTitle("Banking System");
     window.setFixedSize(600, 400);
@@ -279,5 +282,8 @@ int main(int argc, char** argv)
 
     window.show();
 
+    */
+
+    BankingSystem bankSys;
     return app.exec();
 }
