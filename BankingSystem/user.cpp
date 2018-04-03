@@ -3,8 +3,8 @@
 User::User(QWidget *parent) : QWidget(parent)
 {
     name="Scoobert Doobert";
-    userName="username";
-    passWord="password";
+    userName="scoobydoo";
+    passWord="scoobysnacks";
 
 }
 

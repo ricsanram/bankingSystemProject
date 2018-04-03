@@ -9,22 +9,26 @@
 
 #include "mainwindow.h"
 #include "savingscheckingwindow.h"
+#include "login.h"
 
 class BankingSystem : public QWidget
 {
     Q_OBJECT
 private:
+    MainWindow mainWindow;
+    SavingsCheckingWindow savingsCheckingWindow;
+    Login login;
     User user;
     Savings savings;
     Checking checking;
-    MainWindow mainWindow;
-    SavingsCheckingWindow savingsCheckingWindow;
+
 public:
     explicit BankingSystem(QWidget *parent = nullptr);
 
 signals:
 
 public slots:
+    void performLogin();
 };
 
 #endif // BANKINGSYSTEM_H

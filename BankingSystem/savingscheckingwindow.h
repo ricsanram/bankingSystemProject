@@ -11,6 +11,10 @@ class SavingsCheckingWindow : public QMainWindow
 private:
 
 public:
+    QLabel *AccNum = new QLabel(this);
+    QLabel *currentAmount = new QLabel(this);
+    QPushButton *windowClose = new QPushButton(this);
+
     explicit SavingsCheckingWindow(QWidget *parent = nullptr);
 signals:
 
