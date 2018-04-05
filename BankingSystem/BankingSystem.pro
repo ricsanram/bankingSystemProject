@@ -17,7 +17,10 @@ SOURCES += \
     checking.cpp \
     savingscheckingwindow.cpp \
     bankingsystem.cpp \
-    login.cpp
+    login.cpp \
+    depositwindow.cpp \
+    depositsavingswindow.cpp \
+    depositcheckingwindow.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -26,4 +29,7 @@ HEADERS += \
     checking.h \
     savingscheckingwindow.h \
     bankingsystem.h \
-    login.h
+    login.h \
+    depositwindow.h \
+    depositsavingswindow.h \
+    depositcheckingwindow.h

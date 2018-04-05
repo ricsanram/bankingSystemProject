@@ -11,6 +11,9 @@
 #include "mainwindow.h"
 #include "savingscheckingwindow.h"
 #include "login.h"
+#include "depositwindow.h"
+#include "depositcheckingwindow.h"
+#include "depositsavingswindow.h"
 
 class BankingSystem : public QWidget
 {
@@ -19,6 +22,10 @@ private:
     MainWindow mainWindow;
     SavingsCheckingWindow savingsCheckingWindow;
     Login login;
+    DepositWindow depositWindow;
+    DepositSavingsWindow depositSavingsWindow;
+    DepositCheckingWindow depositCheckingWindow;
+
     User user;
     Savings savings;
     Checking checking;

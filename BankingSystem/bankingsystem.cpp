@@ -11,6 +11,9 @@ BankingSystem::BankingSystem(QWidget *parent) : QWidget(parent)
 
     connect(mainWindow.savingsAccount, SIGNAL(clicked()), this, SLOT(savingsWindowUpdate()));
     connect(mainWindow.checkingAccount,SIGNAL(clicked()), this, SLOT(checkingWindowUpdate()));
+    connect(mainWindow.depositFunds, SIGNAL(clicked()), &depositWindow, SLOT(show()));
+    connect(depositWindow.depositChecking,SIGNAL(clicked()), &depositCheckingWindow, SLOT(show()));
+    connect(depositWindow.depositSavings,SIGNAL(clicked()), &depositSavingsWindow, SLOT(show()));
 
     //mainWindow.show();
 }
