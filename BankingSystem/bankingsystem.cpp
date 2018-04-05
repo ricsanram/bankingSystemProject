@@ -9,7 +9,8 @@ BankingSystem::BankingSystem(QWidget *parent) : QWidget(parent)
 
     mainWindow.usersName->setText(user.getName());
 
-    mainWindow.savingsAccount->connect(mainWindow.savingsAccount, SIGNAL(clicked()), &savingsCheckingWindow, SLOT(show()));
+    connect(mainWindow.savingsAccount, SIGNAL(clicked()), this, SLOT(savingsWindowUpdate()));
+    connect(mainWindow.checkingAccount,SIGNAL(clicked()), this, SLOT(checkingWindowUpdate()));
 
     //mainWindow.show();
 }
@@ -26,4 +27,20 @@ void BankingSystem::performLogin()
         login.userNameInput->clear();
         login.passwordInput->clear();
     }
+}
+
+void BankingSystem::savingsWindowUpdate()
+{
+    savingsCheckingWindow.setWindowTitle("Savings");
+    savingsCheckingWindow.AccNum->setText("Account #: " + savings.getAccountNumber());
+    savingsCheckingWindow.currentAmount->setText("$" + QString::number(savings.getBalance()));
+    savingsCheckingWindow.show();
+}
+
+void BankingSystem::checkingWindowUpdate()
+{
+    savingsCheckingWindow.setWindowTitle("Checking");
+    savingsCheckingWindow.AccNum->setText("Account #: " + checking.getAccountNumber());
+    savingsCheckingWindow.currentAmount->setText("$" + QString::number(checking.getBalance()));
+    savingsCheckingWindow.show();
 }

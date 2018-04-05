@@ -2,6 +2,7 @@
 #define BANKINGSYSTEM_H
 
 #include <QWidget>
+#include <QLocale>
 
 #include "user.h"
 #include "savings.h"
@@ -29,6 +30,8 @@ signals:
 
 public slots:
     void performLogin();
+    void savingsWindowUpdate();
+    void checkingWindowUpdate();
 };
 
 #endif // BANKINGSYSTEM_H
