@@ -20,7 +20,9 @@ SOURCES += \
     login.cpp \
     depositwindow.cpp \
     depositsavingswindow.cpp \
-    depositcheckingwindow.cpp
+    depositcheckingwindow.cpp \
+    withdrawwindow.cpp \
+    transferwindow.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -32,4 +34,6 @@ HEADERS += \
     login.h \
     depositwindow.h \
     depositsavingswindow.h \
-    depositcheckingwindow.h
+    depositcheckingwindow.h \
+    withdrawwindow.h \
+    transferwindow.h

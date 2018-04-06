@@ -6,6 +6,7 @@ BankingSystem::BankingSystem(QWidget *parent) : QWidget(parent)
     login.show();
 
     connect(login.loginButton,SIGNAL(clicked()),this,SLOT(performLogin()));
+    connect(login.passwordInput, SIGNAL(returnPressed()), this, SLOT (performLogin()));
 
     mainWindow.usersName->setText(user.getName());
 
@@ -14,6 +15,8 @@ BankingSystem::BankingSystem(QWidget *parent) : QWidget(parent)
     connect(mainWindow.depositFunds, SIGNAL(clicked()), &depositWindow, SLOT(show()));
     connect(depositWindow.depositChecking,SIGNAL(clicked()), &depositCheckingWindow, SLOT(show()));
     connect(depositWindow.depositSavings,SIGNAL(clicked()), &depositSavingsWindow, SLOT(show()));
+    connect(mainWindow.withdrawFunds,SIGNAL(clicked()), &withdrawWindow, SLOT(show()));
+    connect(mainWindow.transferFunds,SIGNAL(clicked()), &transferWindow, SLOT(show()));
 
     //mainWindow.show();
 }

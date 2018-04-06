@@ -2,7 +2,6 @@
 #define BANKINGSYSTEM_H
 
 #include <QWidget>
-#include <QLocale>
 
 #include "user.h"
 #include "savings.h"
@@ -14,6 +13,8 @@
 #include "depositwindow.h"
 #include "depositcheckingwindow.h"
 #include "depositsavingswindow.h"
+#include "withdrawwindow.h"
+#include "transferwindow.h"
 
 class BankingSystem : public QWidget
 {
@@ -25,6 +26,8 @@ private:
     DepositWindow depositWindow;
     DepositSavingsWindow depositSavingsWindow;
     DepositCheckingWindow depositCheckingWindow;
+    WithdrawWindow withdrawWindow;
+    TransferWindow transferWindow;
 
     User user;
     Savings savings;
